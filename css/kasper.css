@@ -690,6 +690,7 @@ header nav .form i {
 }
 .our-skills .container {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 40px;
 }
@@ -703,9 +704,8 @@ our-skills .container .test {
     }
 }
 @media (min-width: 992px) {
-    .our-skills .container .test,
-    .our-skills .container .skill {
-        flex-basis: calc(50% - 20px);
+    .our-skills .container > div {
+        flex-basis: 45%;
     }
 }
 .our-skills .container .heading {
