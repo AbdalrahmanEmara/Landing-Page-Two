@@ -700,17 +700,13 @@ our-skills .container .test {
     text-align: center;
     margin-bottom: 60px;
 }
-
-.our-skills .container .test .box {
-    padding: 20px 0 30px;
-}
-.our-skills .container .test .box .character {
+.our-skills .container .test .character {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 20px;
 }
-.our-skills .container .test .box .character img {
+.our-skills .container .test .character img {
     width: 100px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -718,14 +714,14 @@ our-skills .container .test {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 }
-.our-skills .container .test .box .character .text {
+.our-skills .container .test .character .text {
     position: relative;
     font-size: 16px;
     padding-bottom: 40px;
     padding-left: 20px;
     line-height: 2;
 }
-.our-skills .container .test .box .character .text::before {
+.our-skills .container .test .character .text::before {
     content: '';
     position: absolute;
     width: 95%;
@@ -733,7 +729,7 @@ our-skills .container .test {
     bottom: 0;
     background-color: #ccc;
 }
-.our-skills .container .test .box .character .text::after {
+.our-skills .container .test .character .text::after {
     content: "John Doe, CEO";
     font-size: 15px;
     position: absolute;
@@ -742,23 +738,23 @@ our-skills .container .test {
     color: #777;
 }
 @media (max-width: 767px) {
-    our-skills .container .box .character .image,
-    .our-skills .container .box .character .text {
+    our-skills .container .character .image,
+    .our-skills .container .character .text {
         flex-basis: 100%;
         text-align: center;
     }
 }
 @media (min-width: 768px) {
-    .our-skills .container .test .box .character .image {
+    .our-skills .container .test .character .image {
         flex-basis: calc(20% - 20px);
     }
-    .our-skills .container .test .box .character .text {
+    .our-skills .container .test .character .text {
         padding-left: 30px;
         flex-basis: calc(80% - 20px);
     }
 }
 @media (max-width: 767px) {
-    .our-skills .container .test .box .character .text {
+    .our-skills .container .test .character .text {
         padding-top: 20px;
     }
 }
