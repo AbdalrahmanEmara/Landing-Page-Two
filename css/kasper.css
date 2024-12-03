@@ -702,9 +702,9 @@ our-skills .container .test {
 }
 .our-skills .container .test .character {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 20px;
+    /* To prevent stretching of the image */
+    align-items: center; 
+    margin-bottom: 30px;
 }
 .our-skills .container .test .character img {
     width: 100px;
@@ -713,21 +713,23 @@ our-skills .container .test {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    margin-right: 50px;
+}
+@media (max-width: 767px) {
+    .our-skills .container .test .character {
+        flex-direction: column;
+        text-align: center;
+    }
+    .our-skills .container .test .character img {
+        margin: 0 auto 20px;
+    }
 }
 .our-skills .container .test .character .text {
     position: relative;
     font-size: 16px;
     padding-bottom: 40px;
-    padding-left: 20px;
-    line-height: 2;
-}
-.our-skills .container .test .character .text::before {
-    content: '';
-    position: absolute;
-    width: 95%;
-    height: 1px;
-    bottom: 0;
-    background-color: #ccc;
+    line-height: 1.8;
+    border-bottom: 1px solid #ccc;
 }
 .our-skills .container .test .character .text::after {
     content: "John Doe, CEO";
@@ -737,42 +739,17 @@ our-skills .container .test {
     right: 0;
     color: #777;
 }
-@media (max-width: 767px) {
-    our-skills .container .character .image,
-    .our-skills .container .character .text {
-        flex-basis: 100%;
-        text-align: center;
-    }
-}
-@media (min-width: 768px) {
-    .our-skills .container .test .character .image {
-        flex-basis: calc(20% - 20px);
-    }
-    .our-skills .container .test .character .text {
-        padding-left: 30px;
-        flex-basis: calc(80% - 20px);
-    }
-}
-@media (max-width: 767px) {
-    .our-skills .container .test .character .text {
-        padding-top: 20px;
-    }
-}
+
 .our-skills .container .test ul {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
+    justify-content: center;
     gap: 6px;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
+    margin: 50px 0;
 }
 .our-skills .container .test ul li {
     width: 15px;
     height: 15px;
-    border: 1px solid var(--text-color);
+    border: 1px solid #aaa;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -780,7 +757,7 @@ our-skills .container .test {
     -o-border-radius: 50%;
 }
 .our-skills .container .test ul li.active {
-    border: none;
+    border-color: var(--main-color);
     background-color: var(--main-color);
 }
 
