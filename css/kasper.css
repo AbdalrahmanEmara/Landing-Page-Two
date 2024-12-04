@@ -68,32 +68,6 @@
     color: var(--text-color);
     max-width: 100%;
 }
-.bullets {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    bottom: 30px;
-    display: flex;
-}
-.bullets li {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border: 1px solid white;
-    margin-right: 10px;
-}
-.bullets li.active {
-    background-color: var(--main-color);
-    border-color: var(--main-color);
-}
 .Landing .overlay {
     position: absolute;
     top: 0;
@@ -239,6 +213,8 @@ header nav ul li a.active {
 }
 header nav i {
     color: white;
+    font-size: 20px;
+    font-weight: bold;
 }
 header .container nav .form {
     width: 40px;
@@ -847,3 +823,109 @@ our-skills .container .test {
     margin-bottom: 20px;
 }
 /* End Quote */
+/* Start Pricing */
+.pricing {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.pricing .container .membership {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+/* show only 1 box in the row */
+@media (max-width: 577px) {
+    .pricing .container .membership .box {
+        flex-basis: 100%;
+    }
+}
+/* show 2 boxes in the row */
+@media (min-width: 578px) {
+    .pricing .container .membership .box {
+        flex-basis: 48%;
+    }
+}
+/* show 3 boxes in the row */
+@media (min-width: 992px) {
+    .pricing .container .membership .box {
+        flex-basis: 31.5%;
+    }
+}
+/* show 4 boxes in the row */
+@media (min-width: 1200px) {
+    .pricing .container .membership .box {
+        flex-basis: 22.5%;
+    }
+}
+.pricing .membership .box {
+    background-color: #fcfcfc;
+    text-align: center;
+}
+.pricing .membership .box p {
+    margin: 35px 0 0;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.pricing .membership .box span {
+    display: inline-block;
+    padding: 0 25px;
+    margin: 35px 0;
+    font-size: 65px;
+    font-weight: bold;
+    position: relative;
+}
+.pricing .membership .box span::before {
+    content: "$";
+    position: absolute;
+    font-size: 25px;
+    font-weight: normal;
+    top: -8px;
+    left: 0;
+}
+.pricing .membership .box span::after {
+    content: "/Mo";
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    bottom: 10px;
+    right: -15px;
+}
+.pricing .membership .box hr {
+    border: 0;
+    border-top: 1px solid var(--main-color);
+}
+.pricing .membership .box ul li {
+    width: 140px;
+    margin: auto;
+    padding: 20px 0;
+}
+.pricing .membership .box ul li:not(:last-child) {
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing .membership .box .foot {
+    padding: 20px;
+    margin: 10px;
+}
+.pricing .membership .box .foot a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px;
+    border: 1px solid var(--main-color);
+}
+.pricing .questions {
+    padding: 40px 0;
+    text-align: center;
+}
+.pricing .questions p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.pricing .questions a {
+    text-decoration: none;
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+/* End Pricing */
